@@ -1,4 +1,4 @@
-function [margin] = SVMpredict( x, alpha, b, X, Y, sigma)
+function [margin] = SVMpredict( x, alpha, b, X, Y)
 % Given the optimal dual variables of the SVM problem, the bias,
 %   the training data, the training labels and a data point x, it
 %   calculates the margin for x
