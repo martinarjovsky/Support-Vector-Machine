@@ -22,7 +22,7 @@ function [ alpha, b ] = SVMtrain_QP( X, Y, C, sigma)
     cvx_end
 
     % To calculate b we pick an arbitrary support vector
-    ind = find(alpha>=0.00001 & alpha<=C-0.00001);
+    ind = find(alpha>=C*0.00001 & alpha<=C*(1-0.00001));
     ind = ind(1);
     
     b = Y(ind) - alpha'*(Y.*K(:,ind));   
