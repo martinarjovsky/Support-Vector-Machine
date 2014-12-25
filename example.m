@@ -14,7 +14,7 @@ C = 1;
 hold all
 plot(X(Y>=0,1), X(Y>=0,2), '.');
 plot(X(Y<0,1), X(Y<0,2), '.');
-
+title('True targets');
 
 Ypred = zeros(m, 1);
 for i = 1:m
@@ -25,3 +25,4 @@ figure;
 hold all
 plot(X(Ypred>=0,1), X(Ypred>=0,2), '.');
 plot(X(Ypred<0,1), X(Ypred<0,2), '.');
+title('Predicted targets');
